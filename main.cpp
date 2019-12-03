@@ -20,7 +20,6 @@ int main()
                 {
                        inventory.push_back (word);
                        word.clear();
-                       cout << "New words" << endl;
                 }
 
                 else
