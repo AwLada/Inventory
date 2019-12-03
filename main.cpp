@@ -27,6 +27,7 @@ int main()
                         word.push_back (input[i]);
                 }
         }
+        inventory.push_back (word);
 
         cout<<inventory.size()<<" items in inventory.\n";
         for(int i=0; i<inventory.size(); i++)
