@@ -16,7 +16,7 @@ int main()
 
         for(int i=0; i<input.size(); i++)
         {
-                if (input[i] == ',')
+                if (input[i] == ',' || input[i] == ' ')
                 {
                        inventory.push_back (word);
                        word.clear();
