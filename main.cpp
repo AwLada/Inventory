@@ -10,25 +10,25 @@ int main()
         string input;
         vector <string> inventory;
         string word = "";
-        int a = 0;
 
         cout<<"What's in the store (separate items by commas)? ";
         getline(cin,input);
 
         for(int i=0; i<input.size(); i++)
         {
-                if (!input[i] == ',')
-                {       a++;
-                        word.append (a,input[i]);
-
+                if (input[i] == ',')
+                {
+                       inventory.push_back (word);
+                       word.clear();
+                       cout << "New words" << endl;
                 }
+
                 else
                 {
-                        inventory.push_back (word);
-                        string word ="";
-                        a = 0;
+                        word.push_back (input[i]);
                 }
         }
+
         cout<<inventory.size()<<" items in inventory.\n";
         for(int i=0; i<inventory.size(); i++)
         {
